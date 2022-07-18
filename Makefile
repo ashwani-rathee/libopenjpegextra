@@ -1,4 +1,3 @@
-CC=gcc
 CFLAGS=-I./include -fPIC -std=c11
 DEPS = libopenjpegextra.h 
 
