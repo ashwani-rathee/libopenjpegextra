@@ -188,8 +188,8 @@ opj_image_t *decode(char *filename)
     opj_read_header(l_stream, l_codec, &image);
     opj_decode(l_codec, l_stream, image);
     printf("Decoding %s\n", filename);
-    // opj_stream_destroy(l_stream);
-    // opj_destroy_codec(l_codec);
+    opj_stream_destroy(l_stream);
+    opj_destroy_codec(l_codec);
     // opj_image_destroy(image);
     return image;
 }
