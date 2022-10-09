@@ -9,7 +9,7 @@ all: libopenjpegextra
 TYPE=-shared
 
 libopenjpegextra: libopenjpegextra.o
-	$(CC) $(TYPE) -o $@.$(dlext) -L$(libdir) -lopenjp2
+	$(CC) $(TYPE) $@.o -o $@.$(dlext) -I$(includedir) -L$(libdir) -lopenjp2
 
 # ------------
 # To install the shared objects in their respective locations
